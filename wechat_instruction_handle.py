@@ -35,8 +35,8 @@ for file_name in tqdm(os.listdir(data_dir), desc="Processing files"):  # tqdm展
                 except Exception as e:
                     print(e)
                     print(line)
-                if speaker == "圣经上的子弹":  # 检查是否为小王发言，这里写要提取的人的微信昵称
-                    if "你的密码" in chat or "你的关键信息" in chat  or "[图片]" in chat or "[表情]" in chat or last_message is "[图片]":
+                if speaker == "孙艺峰":  # 检查是否为小王发言，这里写要提取的人的微信昵称
+                    if "你的密码" in chat or "你的关键信息" in chat  or "[图片]" in chat or "[表情]" in chat:
                         continue
                     if last_speaker is not None:  # 判断是否存在上一条发言
                         output.append({  # 存入json
